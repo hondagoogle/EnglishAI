@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>replit</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.5/css/bulma.min.css">
+  <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+  <img src="englishai.png" class="image is-128x128" id="englishai">
+  <div id="stepone" class="">
+    <h2 class="is-size-4 elements">Step 1: Choose an action from the list below:</h2>
+    <div class="select is-rounded elements" style="margin-top: 15px;">
+      <select id="actionselection">
+        <option value="1">Create thesis</option>
+        <option value="2">Comparison thesis</option>
+        <option value="3">Summarize</option>
+        <option value="4">Figurative language</option>
+        <option value="5">Literary comparison</option>
+      </select>
+    </div>
+    <br>
+    <br>
+    <button class="button is-link is-light elements" onclick="stepTwo()">Continue</button>
+  </div>
+  <div class="elements stylehidden" id="steptwo">
+    <h2 class="is-size-4">Step 2: Provide more information</h2>
+    <div id="thesisdiv" class="stylehidden">
+      <br>
+      <p>What literary work do you want to write a thesis about?</p>
+      <br>
+      <input id="thesisinput" class="input is-rounded" type="text" placeholder="Type here:" style="width: 20%">
+    </div>
+    <div id="cthesisdiv" class="stylehidden">
+      <br>
+      <p>What literary works do you want to compare for your thesis?</p>
+      <br>
+      <input id="cthesisinputfirst" class="input is-rounded" type="text" placeholder="First:" style="width: 20%">
+      <input id="cthesisinputsecond" class="input is-rounded" type="text" placeholder="Second:" style="width: 20%">
+    </div>
+    <div id="summarizediv" class="stylehidden">
+      <br>
+      <p>What literary work do you want to summarize?</p>
+      <br>
+      <input id="summarizeinput" class="input is-rounded" type="text" placeholder="Type here:" style="width: 20%">
+    </div>
+    <div id="figurativediv" class="stylehidden">
+      <br>
+      <p>What literary work do you want to find figurative language in?</p>
+      <br>
+      <input id="figurativeinput" class="input is-rounded" type="text" placeholder="Type here:" style="width: 20%">
+      <br><br>
+      <p>What type of figurative language?</p>
+      <div class="select is-rounded" style="margin-top: 15px;">
+      <select id="figurativeselection">
+        <option>Similes</option>
+        <option>Metaphors</option>
+        <option value="Personifications">Personification</option>
+        <option>Foreshadowing</option>
+        <option>Imagery</option>
+        <option>Irony</option>
+        <option>Allusions</option>
+        <option>Symbolism</option>
+        <option value="Paradoxes">Paradox</option>
+      </select>
+      </div>
+    </div>
+    <div id="literarydiv" class="stylehidden">
+      <br>
+      <p>What literary works do you want to compare?</p>
+      <br>
+      <input id="literaryinputfirst" class="input is-rounded" type="text" placeholder="First:" style="width: 20%">
+      <input id="literaryinputsecond" class="input is-rounded" type="text" placeholder="Second:" style="width: 20%">
+    </div>
+    <br>
+    <button class="button is-link is-light" onclick="stepThree()">Continue</button>
+  </div>
+  <div id="stepthree" class="elements stylehidden">
+    <h2 class="is-size-4">Results:</h2>
+    <br>
+    <b>
+      <p id="choice"></p>
+      <br>
+    </b>
+    <div>
+      <div class="control">
+        <p style="background-color: #ebebeb; padding: 15px; width: 50%" id="response">Generating now...</p>
+      </div>
+      <br><br>
+      <button class="button is-link is-light" onclick="location.reload();">Start over!</button>
+    </div>
+  </div>
+
+  </div>
+  <script src="script.js"></script>
+</body>
+
+</html>
