@@ -87,7 +87,7 @@ function request(prompt, element) {
     var xhr = new XMLHttpRequest();
     xhr.open("POST", url);
 
-    xhr.setRequestHeader("Authorization", "Bearer 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");
+    xhr.setRequestHeader("Authorization", "Bearer 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");
     xhr.setRequestHeader("Content-Type", "application/json");
 
     xhr.onreadystatechange = function () {
