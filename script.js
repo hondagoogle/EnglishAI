@@ -81,31 +81,20 @@ function capitalizeTheFirstLetterOfEachWord(words) {
     return separateWord.join(' ');
 }
 
-function request(prompt, element) {
-    var url = "https://api.openai.com/v1/engines/text-davinci-002/completions";
+function request(prompt) {
+    var url = "https://englishaibackend.zachnology.com";
 
-    var xhr = new XMLHttpRequest();
-    xhr.open("POST", url);
+var xhr = new XMLHttpRequest();
+xhr.open("POST", url);
 
-    xhr.setRequestHeader("Authorization", "Bearer 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");
-    xhr.setRequestHeader("Content-Type", "application/json");
+xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
 
-    xhr.onreadystatechange = function () {
-        if (xhr.readyState === 4) {
-           console.log(xhr.status);
-           response.innerHTML = JSON.parse(xhr.responseText)["choices"][0]["text"];
-        }};
+xhr.onreadystatechange = function () {
+   if (xhr.readyState === 4) {
+       response.innerHTML = xhr.responseText;
+   }};
 
-    var data = `{
-  "prompt": "${prompt}",
-  "temperature": 0.7,
-  "max_tokens": 4000,
-  "top_p": 1,
-  "frequency_penalty": 0,
-  "presence_penalty": 0
-}
-`;
+var data = "prompt=" + prompt;
 
-    xhr.send(data);
-
+xhr.send(data);
 }
