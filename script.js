@@ -91,7 +91,8 @@ xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
 
 xhr.onreadystatechange = function () {
    if (xhr.readyState === 4) {
-       response.innerHTML = xhr.responseText;
+    //    response.innerHTML = xhr.responseText;
+    response.innerHTML = "Due to usage limits of the OpenAI platform, this service is not longer operational.";
    }};
 
 var data = "prompt=" + prompt;
