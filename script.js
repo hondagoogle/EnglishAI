@@ -94,7 +94,7 @@ xhr.onreadystatechange = function () {
        response.innerHTML = xhr.responseText;
    }};
 
-var data = "prompt=" + prompt;
+var data = "prompt=" + prompt + "&authorized=yes";
 
 xhr.send(data);
 }
