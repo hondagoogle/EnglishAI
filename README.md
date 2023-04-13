@@ -11,6 +11,8 @@ EnglishAI allowed users to input a literary title and instruct the AI to create 
 This repo is simply for archival purposes and to remember what the less-known AIs were like before the rise of ChatGPT. :)
 
 
+(Also the code is pretty bad and not optimized at all. Please don't judge, this interface took like 20 mins)
+
 
 ## Screenshots:
 
